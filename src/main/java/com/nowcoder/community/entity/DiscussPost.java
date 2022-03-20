@@ -4,7 +4,6 @@ import java.util.Date;
 
 /**
  * @author hpr
- * @version 1.0.0
  * @date 2022-03-10 9:51
  */
 public class DiscussPost {

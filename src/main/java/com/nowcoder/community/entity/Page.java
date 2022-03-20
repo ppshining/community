@@ -3,7 +3,6 @@ package com.nowcoder.community.entity;
 /**
  * 封装分页相关的信息
  * @author hpr
- * @version 1.0.0
  * @date 2022-03-10 23:47
  */
 public class Page {

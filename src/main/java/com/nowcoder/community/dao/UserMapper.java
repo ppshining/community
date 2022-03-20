@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 写增删改查方法 和对应的SQL配置文件
  * @author hpr
- * @version 1.0.0
  * @date 2022-03-08 22:44
  */
 @Mapper

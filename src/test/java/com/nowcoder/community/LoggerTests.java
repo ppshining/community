@@ -8,7 +8,6 @@ import org.springframework.test.context.ContextConfiguration;
 
 /**
  * @author hpr
- * @version 1.0.0
  * @date 2022-03-12 15:45
  */
 @SpringBootTest
