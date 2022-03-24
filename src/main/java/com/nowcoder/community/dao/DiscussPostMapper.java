@@ -13,8 +13,26 @@ import java.util.List;
 @Mapper
 public interface DiscussPostMapper {
 
-    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit); // 首页查询不用userId 个人主页查询时需要，考虑到将来功能的适用程度 ==》动态SQL
+    /**
+     * 首页查询不用userId 个人主页查询时需要，考虑到将来功能的适用程度 ==》动态SQL
+     * @param userId 用户id（首页不需要）
+     * @param offset 起始偏移量
+     * @param limit 每页的条数
+     * @return 该用户该页的帖子列表
+     */
+    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit);
 
-    int selectDiscussPostRows(@Param("userId") int userId); // 要在SQL里用到动态的条件，且方法里只有一个参数，这个参数必须起别名不然会报错
+    /**
+     * Param注解用于给参数起别名
+     * 如果只有一个参数 并且在<if>里使用 则必须加别名（SQL里有动态条件）
+     * @param userId 用户id
+     * @return 该用户的帖子总条数
+     */
+    int selectDiscussPostRows(@Param("userId") int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    int updateCommentCount(int id, int commentCount);
 }
